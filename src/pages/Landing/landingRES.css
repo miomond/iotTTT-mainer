@@ -1,0 +1,464 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* start banner section */
+
+.banner {
+    width: 100%;
+    height: calc(fit-content);
+    margin-top: 50px;
+}
+.banner h2 {
+    color: #093a69;
+    text-align: center;
+    /* margin-left: 250px; */
+    width: 100%;
+
+}
+
+.line-banner {
+    width: 30%;
+    margin-top: 8px;
+    color: #91b3fa;
+    border: solid;
+margin-left: 500px;
+}
+
+.parent-card {
+    height: fit-content;
+    animation: scale-up-center 5s cubic-bezier(0.11, 0.575, 0.390, 1.000) both;
+
+}
+
+
+
+.card1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 0px 65px;
+
+}
+
+.card1 img {
+    width: 500px;
+
+
+}
+@keyframes scale-up-center {
+	0% {
+
+		transform: scale(.1);
+	}
+
+	100% {
+
+		transform: scale(1);
+	}
+}
+
+
+  
+/* responsive */
+.card-content {
+    /* align-items: center; */
+    max-width: 600px;
+    height: calc(fit-content + 100px);
+    margin-top: 80px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.card-content h3 {
+    font-size: 35px;
+    line-height: 50px;
+    padding: 15px 35px;
+    color: #093a69;
+    width: 85%;
+}
+
+.card-content p {
+    font-size: 18px;
+    padding: 0px 35px 20px;
+    width: 80%;
+}
+
+/* card 2 */
+#card-reverse {
+    width: 100%;
+
+}
+
+
+/* end card2 */
+
+.card-content button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    margin-bottom: 30px;
+
+}
+
+.card-content button.learn-more {
+    width: 12rem;
+    height: auto;
+    margin-left: 35px;
+}
+
+.card-content button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #3863f2;
+    border-radius: 1.625rem;
+}
+
+.card-content button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+.card-content button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+.card-content button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+.card-content button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.card-content button:hover .circle {
+    width: 100%;
+}
+
+.card-content button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+
+.card-content button:hover .button-text {
+    color: #fff;
+}
+
+
+
+
+
+  
+
+/* hero section */
+
+/* responsive */
+.tra{
+    width: 400px;
+    height: 70px;
+    /* margin-left: 30px; */
+}
+.heroSection {
+    background-color: #ffffff;
+    border-bottom: #e9f4fa;
+    box-shadow: inset 0px 0px 150px 50px rgba(0, 0, 200, 0.1);
+    /* height: calc(fit-content + 100px); */
+
+    min-height: 70svh;
+}
+
+.praHero {
+height: fit-content;
+}
+/* responsive */
+.praHero h1{
+    color: #1e3f6a;
+    line-height: 45px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    width: 60%;
+    text-transform: capitalize;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+   /* text-align: center; */
+
+}
+
+.heroSection p {
+    font-size: 16px;
+    line-height: 25px;
+    color: #316099;
+    margin: 0px 30px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    width: 60%;
+}
+
+.imgHero {
+    width: 100 px;
+    place-content: end;
+    margin: 100px 50px;
+   
+}
+
+
+
+
+/* button */
+.voltage-button {
+    position: relative;
+    right: 100px;
+    top: 50px;
+
+
+}
+
+.voltage-button button {
+    color: white;
+    background: #0D1127;
+    padding: 1rem 3rem 1rem 3rem;
+    border-radius: 5rem;
+    border: 5px solid #5978F3;
+    font-size: 1.2rem;
+    line-height: 1em;
+    letter-spacing: 0.075em;
+    transition: background 0.3s;
+}
+
+.voltage-button button:hover {
+    cursor: pointer;
+    background: #0F1C53;
+}
+
+.voltage-button button:hover+svg,
+.voltage-button button:hover+svg+.dots {
+    opacity: 1;
+}
+
+.voltage-button svg {
+    display: block;
+    position: absolute;
+    top: -0.75em;
+    left: -0.25em;
+    width: calc(100% + 0.5em);
+    height: calc(100% + 1.5em);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s;
+    transition-delay: 0.1s;
+}
+
+.voltage-button svg path {
+    stroke-dasharray: 100;
+    filter: url("#glow");
+}
+
+.voltage-button svg path.line-1 {
+    stroke: #f6de8d;
+    stroke-dashoffset: 0;
+    animation: spark-1 3s linear infinite;
+}
+
+.voltage-button svg path.line-2 {
+    stroke: #6bfeff;
+    stroke-dashoffset: 500;
+    animation: spark-2 3s linear infinite;
+}
+
+.voltage-button .dots {
+    opacity: 0;
+    transition: opacity 0.3s;
+    transition-delay: 0.4s;
+}
+
+.voltage-button .dots .dot {
+    width: 1rem;
+    height: 1rem;
+    background: white;
+    border-radius: 100%;
+    position: absolute;
+    opacity: 0;
+}
+
+.voltage-button .dots .dot-1 {
+    top: 0;
+    left: 20%;
+    animation: fly-up 3s linear infinite;
+}
+
+.voltage-button .dots .dot-2 {
+    top: 0;
+    left: 55%;
+    animation: fly-up 3s linear infinite;
+    animation-delay: 0.5s;
+}
+
+.voltage-button .dots .dot-3 {
+    top: 0;
+    left: 80%;
+    animation: fly-up 3s linear infinite;
+    animation-delay: 1s;
+}
+
+.voltage-button .dots .dot-4 {
+    bottom: 0;
+    left: 30%;
+    animation: fly-down 3s linear infinite;
+    animation-delay: 2.5s;
+}
+
+.voltage-button .dots .dot-5 {
+    bottom: 0;
+    left: 65%;
+    animation: fly-down 3s linear infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes spark-1 {
+    to {
+        stroke-dashoffset: -1000;
+    }
+}
+
+@keyframes spark-2 {
+    to {
+        stroke-dashoffset: -500;
+    }
+}
+
+@keyframes fly-up {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.2);
+    }
+
+    5% {
+        opacity: 1;
+        transform: translateY(-1.5rem) scale(0.4);
+    }
+
+    10%,
+    100% {
+        opacity: 0;
+        transform: translateY(-3rem) scale(0.2);
+    }
+}
+
+@keyframes fly-down {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.2);
+    }
+
+    5% {
+        opacity: 1;
+        transform: translateY(1.5rem) scale(0.4);
+    }
+
+    10%,
+    100% {
+        opacity: 0;
+        transform: translateY(3rem) scale(0.2);
+    }
+}
+@media (max-width: 1024) {
+    .voltage-button{
+        margin-left: 1500px;
+    }
+   .voltage-button button {
+    margin-left: 350px;
+    }
+  }
+
+.about-intro {
+    margin-top: 150px;
+  
+  }
+  
+  .pragraph {
+    
+    width: 100%;
+    padding-bottom: 30px;
+  
+  }
+  
+  .pragraph h1 {
+    color: #003162;
+    width: 20%;
+    font-size: px;
+    text-transform: capitalize;
+    margin-left: 200px;
+  }
+  
+  .pragraph p {
+    width: 50%;
+    color: #316099;
+    padding-top: 10px;
+  }
+  
+  .container-img {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top,
+    rgba(0, 0, 0, 0.5) 20%,
+    rgba(0, 0, 0, 0.5) 20%), url(../../assets/smart-home-with-internet-of-things.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    border-radius: 0px 0px 150px 0px;
+  }
+  
+  .container-img h2 {
+    color: #8dbcdd;
+    display: block;
+    padding-top: 500px;
+    padding-left: 89px;
+    width: 51%;
+    text-transform: capitalize;
+  
+  }
+
+
+

@@ -1,0 +1,289 @@
+/* footer */
+
+footer {
+    width: 100%;
+    height: fit-content;
+    margin-top: 15px;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    background-color: #306199;
+    border-radius: 0px 150px 0px 0px;
+    
+  }
+  .remo{
+    list-style: none;
+      display: flex;
+      flex-direction: row;
+      text-decoration: none;
+      /* padding: 2px 0px 2px 30px ;     */
+      width: fit-content!important;
+  }
+
+  
+  .first1 {
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+  
+  }
+  
+  
+  .pra-first {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  
+  .pra-first h2 {
+    color: #ffffff;
+    width: 30%;
+    padding-left: 150px;
+    margin-top: 80px;
+  }
+  
+  
+  .pra-first p {
+    width: 65%;
+    padding-left: 150px;
+    margin-top: 20px;
+    color: #ffffff;
+  }
+  
+  
+  
+  /* button footer */
+  .button-footer {
+    background-color: #ffffff00;
+    color: #fff;
+    width: 8.5em;
+    height: 2.9em;
+    border: #fff 0.2em solid;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+    margin-top: 150px;
+  }
+  
+  .button-footer:hover {
+    background-color: #3654ff;
+    cursor: pointer;
+  }
+  
+  .button-footer svg {
+    width: 1.6em;
+    margin: -0.2em 0.8em 1em;
+    position: absolute;
+    display: flex;
+    transition: all 0.6s ease;
+  }
+  
+  .button-footer:hover svg {
+    transform: translateX(5px);
+  }
+  
+  .text {
+    margin: 0 1.5em;
+    width:95px;
+  }
+  
+  
+  
+   hr {
+    width: 80%;
+    color: #ffffff;
+    margin: 50px 0px;
+  }
+  
+  
+  /* info footer */
+  .info-footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  /* list footer and link */
+  .parent-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 90px;
+    grid-row-gap: 29px;
+    width: 100%;
+  
+  }
+  
+  .div1 {
+    grid-area: 1 / 1 / 4 / 3;
+
+
+  
+  }
+  .div1 ul{
+    display: flex;
+    flex-direction: column;
+  }
+  .div2 ul{
+    display: flex;
+    flex-direction: column;
+  }
+  .div3 ul{
+    display: flex;
+    flex-direction: column;
+  }
+  .div1 h3{
+    color: #ffffff;
+    padding: 25px 0px 10px 30px ;
+  }
+  
+  
+  .div1 ul li a {
+    list-style: none;
+      display: flex;
+      flex-direction: row;
+      text-decoration: none;
+      padding: 2px 0px 2px 30px ;
+  }
+  .div1 ul li  {
+    list-style: none;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .div1 ul li img {
+    width: 20px;
+    margin-bottom: 25px;
+  }
+  .div1 ul li span{
+    margin-left: 15px;
+    color: #ffffff;
+  }
+  
+  
+  .div2 {
+    grid-area: 1 / 2 / 4 / 2;
+    
+  }
+  
+  .div2 ul li  {
+    list-style: none;
+  /* padding: 0px 0px 10px 0px; */
+  display: flex;
+  align-items: center;
+  }
+  
+  .div2 ul li a {
+    color: #ffffff;
+    list-style: none;
+      display: flex;
+      flex-direction: row;
+      text-decoration: none;
+      padding: 0px 15px 10px;
+      
+  }
+  .div2 ul li img {
+    width: 25px;
+ 
+  }
+
+  
+  .div2 h3{
+    color: #ffffff;
+    /* text-align: center; */
+    padding: 25px 0px 10px 0px ;
+  }
+  
+  
+  .div3 {
+    grid-area: 1 / 3 / 4 / 4;
+    
+  
+  }
+  .div3 h3{
+    color: #ffffff;
+    padding: 25px 0px 10px 0px ;
+  }
+  
+  
+  .div3 ul li {
+    list-style: none;
+  padding: 0px 0px 10px 0px;
+  
+  }
+  .div3 ul li a {
+    color: #ffffff;
+    list-style: none;
+      display: flex;
+      flex-direction: row;
+      text-decoration: none;
+      
+  }
+
+
+
+
+
+  @media only screen and (max-width: 500px) {
+    .pra-first {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+    }
+   
+    .pra-first h2 {
+      color: #ffffff;
+      width: 95%;
+      padding-left: 20px;
+      margin-top: 80px;
+    }
+      
+  .pra-first p {
+    width: 95%;
+    padding-left: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+
+
+  }
+  .div1 ul li span{
+    margin-left: 0px;
+    color: #ffffff;
+  }
+  .div1 h3{
+    color: #ffffff;
+    padding: 25px 0px 10px 12px ;
+  }
+  
+  
+  .div1 ul li a {
+    list-style: none;
+      display: flex;
+      flex-direction: row;
+      text-decoration: none;
+      padding: 30px 0px 2px 12px ;
+  }
+
+  .div2 ul li a {
+    
+      padding: 0px 5px 10px;
+      
+  }
+  .div2 ul li img {
+    width: 25px;
+ 
+  }
+
+  
+  .div2 h3{
+    color: #ffffff;
+    /* text-align: center; */
+    padding: 25px 0px 10px 0px ;
+  }
+.div3{
+  padding-right: 25px;
+}
+  
+  
+
+  }

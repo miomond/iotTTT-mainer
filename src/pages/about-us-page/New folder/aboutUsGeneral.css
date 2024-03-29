@@ -1,0 +1,32 @@
+/* --------------------start general-------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    /* overflow: hidden; */
+    height: fit-content;
+    font-family: "Open Sans", sans-serif;    
+}
+ul{
+    list-style: none;
+    display: flex;
+    padding-left: 0px;
+
+}
+a{
+    /* text-decoration: none; */
+    all: unset;
+}
+
+
+.container{
+    width: 1260px;
+    margin: auto;
+
+}
+
+
+/* ----------------end general--------------- */

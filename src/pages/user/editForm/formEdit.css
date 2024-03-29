@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.section-edit-form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    /* width: 100%; */
+    /* height: 100vh; */
+
+}
+
+.img{
+    width: 500px;
+    margin-top: 100px;
+}
+.edit-info-user {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-image: url('../../../assets/bacForm.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+margin-top: 50px;
+    height: 730px;
+    width: 50%;
+}
+
+.edit-info-user h1 {
+    margin-top: 45px;
+    color: white;
+}
+
+.form-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 300px;
+
+}
+
+.form-info>label {
+    font-size: 18px;
+    padding: 0px 0px 7px 0px;
+color: white;
+}
+
+
+.input-data {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid transparent;
+}
+
+.input-data:focus {
+    animation: rotateShadow 2s infinite linear;
+}
+
+@keyframes rotateShadow {
+    0% {
+        box-shadow: -2px -2px 0px 0px #aa00ff, 2px 2px 0px 0px #3700ff;
+    }
+
+    25% {
+        box-shadow: -2px 2px 0px 0px #aa00ff, 2px -2px 0px 0px #3700ff;
+    }
+
+    50% {
+        box-shadow: 2px 2px 0px 0px #aa00ff, -2px -2px 0px 0px #3700ff;
+    }
+
+    75% {
+        box-shadow: 2px -2px 0px 0px #aa00ff, -2px 2px 0px 0px #3700ff;
+    }
+
+    100% {
+        box-shadow: -2px -2px 0px 0px #aa00ff, 2px 2px 0px 0px #3700ff;
+    }
+}
+
+/* button setting */
+
+.button-setting {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(28, 58, 100);
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+    margin-top: 35px;
+}
+
+.button-setting::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: rgb(75, 100, 245);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button-setting:hover::before {
+    scale: 3;
+}
+
+.button-setting:hover {
+    color: #ffffff;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
+}
+
+.button-setting:active {
+    scale: 1;
+}

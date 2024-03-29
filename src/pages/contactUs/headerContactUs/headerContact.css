@@ -1,0 +1,24 @@
+.master {
+    background-image: url(../../../assets/headBackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    color: #ffffff;
+    margin-top: 70px;
+}
+
+.master h1 {
+    padding: 15px 0px;
+}
+
+.master p {
+    width: 45%;
+    line-height: 25px;
+}

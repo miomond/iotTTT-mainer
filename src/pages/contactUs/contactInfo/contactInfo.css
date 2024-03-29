@@ -1,0 +1,54 @@
+.info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: start;
+}
+
+.contact h3 {
+    color: #00285e;
+    padding: 15px 150px;
+    font-size: larger;
+}
+
+.contact p {
+    width: 80%;
+    padding: 15px 150px;
+}
+
+.img-info {
+    width: 500px;
+    padding: 0px 50px;
+}
+
+.info-contact {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 150px;
+    color: #929292;
+}
+
+.info-contact div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.info-contact div span {
+    padding: 0px 10px;
+}
+
+
+.info-contact img {
+    width: 35px;
+}
+

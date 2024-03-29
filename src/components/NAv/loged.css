@@ -1,0 +1,46 @@
+.logout{
+    cursor: pointer;
+    position: relative;
+    padding: 8px 35px;
+    font-size: 18px;
+    color: #429ce3;
+    border: 2px solid #429ce3;
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+    margin: 5px 10px;
+    padding: 5px 60px;
+    text-align: center;
+}
+
+
+
+
+.logout:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: #a7cbff;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .logout:hover::before {
+    scale: 3;
+  }
+  
+  .logout:active {
+    scale: 1;
+  }
+  
+  .logout:hover {
+    color: #ffffff;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(167, 203, 255, 0.4);
+    border: 1px solid white;
+  
+  }

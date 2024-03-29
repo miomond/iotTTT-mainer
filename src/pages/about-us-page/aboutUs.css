@@ -1,0 +1,482 @@
+
+/* 
+---------------------------------------------
+Banner Style
+--------------------------------------------- 
+*/
+
+.main-banner {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 250px 120px 150px 120px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 62px;
+    height: fit-content;
+  }
+  
+  .main-banner:after {
+    content: '';
+    background-image: url(../../assets/slider-left-dec.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+
+
+  .blogshare{
+    color: #115bc8;
+    width: fit-content;
+    display: inline;
+  }
+  .blogshare:hover{
+    cursor: pointer;
+    color: #75acfd;
+  }
+  
+  .main-banner .left-content {
+    margin-right: 15px;
+  }
+  
+  .main-banner .left-content h2 {
+    z-index: 2;
+    position: relative;
+    font-weight: 700;
+    line-height: 70px;
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .main-banner .left-content p {
+    margin-bottom: 45px;
+    color: #2a2a2a;
+    font-weight: 400;
+  }
+  
+  .main-banner .left-content .first-button {
+    margin-right: 15px;
+  }
+  
+  .main-banner .left-content .white-button {
+    display: inline-block;
+  }
+  
+  .main-banner .right-image {
+    text-align: center;
+    position: relative;
+    z-index: 20;
+  }
+  
+  .main-banner .right-image img {
+    max-width: 710px;
+  }
+  
+  .main-banner .left-content .white-button a {
+    background-color: #4b8ef1;
+    color: #fff !important;
+  }
+  
+  /* 
+  ---------------------------------------------
+  Services Style
+  --------------------------------------------- 
+  */
+  
+  .services {
+    padding-top: 130px;
+    position: relative;
+  }
+  
+  .services  .section-heading p {
+    margin-top: 10px;
+    margin-left: 18%;
+    margin-right: 18%;
+  }
+  
+  .services .container-fluid {
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+  
+  .services:after {
+    content: '';
+    background-image: url(../../assets/services-left-dec.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    bottom: -300px;
+    width: 261px;
+    height: 368px;
+    z-index: 0;
+  }
+  
+  .services:before {
+    content: '';
+    background-image: url(../../assets/services-right-dec.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1136px;
+    height: 244px;
+    z-index: 0;
+  }
+  
+  .services .section-heading {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  
+  .services .section-heading .line-dec {
+    margin: 0 auto;
+  }
+  
+  .service-item {
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    border-top-right-radius: 50px;
+    transition: all .3s;
+  }
+  
+  .service-item .icon {
+    margin-left: 0px;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    transition: all .3s;
+  }
+  
+  .service-item h4 {
+    transition: all .3s;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .service-item p {
+    transition: all .3s;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .service-item:hover h4,
+  .service-item:hover p,
+  .service-item:hover .text-button a {
+    color: #fff;
+  }
+  
+  .first-service .icon {
+    background-image: url(../../assets/service-icon-01.png);
+  }
+  
+  .first-service:hover .icon {
+    background-image: url(../../assets/service-icon-hover-01.png);
+  }
+  
+  .second-service .icon {
+    background-image: url(../../assets/service-icon-02.png);
+  }
+  
+  .second-service:hover .icon {
+    background-image: url(../../assets/service-icon-hover-02.png);
+  }
+  
+  
+  .third-service .icon {
+    background-image: url(../../assets/service-icon-03.png);
+  }
+  
+  .third-service:hover .icon {
+    background-image: url(../../assets/service-icon-hover-03.png);
+  }
+  
+  .fourth-service .icon {
+    background-image: url(../../assets/service-icon-04.png);
+  }
+  
+  .fourth-service:hover .icon {
+    background-image: url(../../assets/service-icon-hover-04.png);
+  }
+  
+  .service-item:hover {
+    background-image: url(../../assets/service-bg.jpg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  
+  
+  /*
+  ---------------------------------------------
+  About Us
+  ---------------------------------------------
+  */
+  
+  .about-us {
+    padding-top: 130px;
+    position: relative;
+  }
+  
+  .about-us .section-heading {
+    margin-bottom: 45px;
+  }
+  
+  .about-us .section-heading,
+  .about-us .box-item,
+  .about-us p,
+  .about-us .box-item .gradient-button,
+  .about-us .box-item span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .about-us .box-item {
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.07);
+    padding: 10px 30px;
+    background-color: #e3e0e0;
+    border-radius: 40px;
+    margin-bottom: 30px;
+  }
+  
+  .about-us .box-item h4 a {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 8px;
+    color: #2a2a2a;
+    transition: all .3s;
+  }
+  
+  .about-us .box-item p {
+    margin-bottom: 0px;
+  }
+  
+  .about-us .box-item:hover h4 a {
+    color: #4b8ef1;
+  }
+  
+  .about-us .gradient-button {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .about-us span {
+    font-size: 14px;
+    color: #7a7a7a;
+  }
+  
+  .about-us .right-image {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .about-us:after {
+    background-image: url(../../assets/about-bg.jpg);
+    width: 777px;
+    height: 1132px;
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+  
+  
+  
+  
+  /* 
+  ---------------------------------------------
+  responsive
+  --------------------------------------------- 
+  */
+  
+  
+  
+  @media (max-width: 1200px) {
+   
+   
+    .main-banner .left-content h2 {
+      z-index: 2;
+      position: relative;
+      font-weight: 700;
+      line-height: 70px;
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+  
+    .main-banner .left-content p {
+      margin-bottom: 45px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+  
+    .main-banner:after {
+      display: none;
+    } 
+    .main-banner .left-content h2 {
+      color: #2a2a2a;
+      margin-right: 0;
+    }
+    .main-banner .left-content p {
+      color: #afafaf;
+      margin-right: 0;
+    }
+    .main-banner .left-content .white-button a {
+      background-color: #4b8ef1;
+      color: #fff !important;
+    }
+    form#contact {
+      overflow: hidden;
+    }
+   
+    .main-banner .left-content {
+      margin-right: 0px;
+    }
+    .main-banner {
+      text-align: center;
+      padding: 226px 0px 30px 0px;
+    }
+    .main-banner:before {
+      display: none;
+    }
+    .main-banner .right-image {
+      margin: 30px auto 0px auto;
+      text-align: center;
+    }
+    .features-item {
+      margin-bottom: 45px;
+    }
+    .last-features-item,
+    .last-skill-item {
+      margin-bottom: 0px !important;
+    }
+    .skill-item {
+      margin-bottom: 30px;
+    }
+    .about-left-image img {
+      margin-right: 0px;
+      margin-bottom: 45px;;
+    }
+    .services .naccs .menu div {
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .service-item {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .about-us .box-item {
+      text-align: center;
+    }
+    .about-us:after {
+      display: none;
+    }
+    .about-us .gradient-button,
+    .about-us span {
+      text-align: center;
+      display: block;
+    }
+    .about-us .right-image {
+      margin-top: 30px;
+    }
+    .service-item .icon {
+      margin: 0 auto 30px auto;
+    }
+    .about-us .section-heading {
+      text-align: center;
+    }
+    .about-us .left-image {
+      margin-right: 30px;
+      margin-left: 30px;
+      margin-bottom: 45px;
+    }
+    
+  }
+  
+  @media (max-width: 767px) {
+   
+   
+    .main-banner .info-stat {
+      margin-bottom: 15px;
+    }
+    .menu .thumb span.date {
+      margin-bottom: -20px;
+      display: block;
+    }
+    .service-item {
+      text-align: center;
+      padding: 30px;
+    }
+    .menu .thumb span.category {
+      display: none;
+    }
+    .about-us .right-image {
+      margin-top: 30px;
+    }
+    .service-item .icon {
+      float: none;
+      margin-right: 0px;
+      margin-bottom: 15px;
+    }
+    .service-item .right-content {
+      display: inline-block;
+    }
+    .services .naccs .menu div .thumb {
+      padding: 5px;
+    }
+    .services .icon img {
+      margin: 0px;
+    }
+   
+    .services ul.nacc li.active {
+      padding: 45px;
+    }
+    .services .naccs .menu div  {
+      font-size: 0px;
+    }
+    .the-clients .nacc .thumb .down-content {
+      text-align: center;
+    }
+    .services ul.nacc li .right-image img {
+      float: none;
+    }
+    .our-portfolio .section-heading,
+    .about-us .section-heading,
+    .about-us .about-item,
+    .about-us p,
+    .about-us .main-green-button {
+      text-align: center;
+    }
+    .our-portfolio .section-heading .line-dec {
+      margin: 0 auto;
+    }
+    .our-services .section-heading {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+   
+    .post-item .right-content p {
+      display: none;
+    }
+    .about-us .about-item {
+      margin-top: 15px;
+    }
+    form#contact {
+      padding: 30px;
+    }
+  }

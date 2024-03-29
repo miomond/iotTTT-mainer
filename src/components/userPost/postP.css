@@ -1,0 +1,139 @@
+
+/* third section */
+.third-section{
+   
+   
+}
+
+
+
+.third-card{
+
+    gap: 35px;
+    margin-top: 15px;
+    
+    
+}
+
+
+.third-card-paragraph{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: fit-content;
+    padding: 35px 15px;
+    margin-bottom: 35px;
+    margin-top: 44px;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    border-radius: 35px;
+}
+
+.third-card-paragraph h1{
+    width: 40%;
+    line-height: 35px;
+    color: #002c5f;
+    margin-left: 15px;
+}
+
+.third-card-paragraph p{
+    width: 80%;
+    line-height: 25px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+
+/* comment button */
+
+.bookmarkBtn {
+    width: 130px;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: .3s;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.062);
+    margin-left: 50px;
+  }
+  
+  .IconContainer {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(103, 74, 228);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+    transition-duration: .3s;
+  }
+  
+  .icon {
+    border-radius: 1px;
+  }
+  
+  .text-btn {
+    height: 100%;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(26, 26, 26);
+    z-index: 1;
+    transition-duration: .3s;
+    font-size: 1.04em;
+    font-weight: 600;
+  }
+  
+  .bookmarkBtn:hover .IconContainer {
+    width: 120px;
+    border-radius: 40px;
+    transition-duration: .3s;
+  }
+  
+  .bookmarkBtn:hover .text-btn {
+    transform: translate(10px);
+    width: 0;
+    font-size: 0;
+    transition-duration: .3s;
+  }
+  
+  .bookmarkBtn:active {
+    transform: scale(0.95);
+    transition-duration: .3s;
+  }
+
+
+
+
+/* end comment button */
+
+
+
+
+@media only screen and (max-width: 800px) {
+  .third-card img
+ {
+      width: 600px;
+
+ }
+ 
+
+}
+
+
+@media only screen and (max-width: 500px) {
+  .third-card img
+ {
+      width: 470px;
+
+ }
+ 
+
+}

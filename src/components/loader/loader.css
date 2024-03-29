@@ -1,0 +1,234 @@
+@property --value {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+  }
+  @property --width-ratio {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+  }
+  @property --scale {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+  }
+  :root {
+    --width: 1.8vmin;
+    --duration: 10s;
+    --size: 70vmin;
+    --logo: url("/src/components/loader/logo.svg");
+  }
+  @supports not (background: paint(foo)) {
+    :root {
+      --duration: 10s;
+    }
+  }
+  
+  .rings {
+    filter: url(#blurFilter);
+    width: var(--size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+    perspective: var(--size);
+  }
+  .rings:before, .rings:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: red;
+    border-radius: 50%;
+    --width-ratio: 1;
+    border: calc(var(--width) * var(--width-ratio)) solid transparent;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    background: conic-gradient(from calc(var(--value) * 3), #41dbff, transparent, #04f5ff, #278ebb, #3bf6ff, transparent, transparent, #00a8ff, transparent, #24e0ff, #00cdff, white, transparent, transparent, transparent) border-box;
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    --start: 180deg;
+    --value: var(--start);
+    --scale: 1;
+    transform: rotateY(var(--value)) rotateX(var(--value)) rotateZ(var(--value)) scale(var(--scale));
+  }
+  @supports (background: paint(foo)) {
+    .rings:before, .rings:after {
+      -webkit-animation: ring var(--duration) ease-in-out infinite;
+              animation: ring var(--duration) ease-in-out infinite;
+    }
+  }
+  @supports not (background: paint(foo)) {
+    .rings:before, .rings:after {
+      -webkit-animation: ring-legacy var(--duration) ease-in-out infinite;
+              animation: ring-legacy var(--duration) ease-in-out infinite;
+    }
+  }
+  .rings:before {
+    --start: 180deg;
+  }
+  .rings:after {
+    --start: 90deg;
+  }
+  .rings > .rings:before {
+    --start: 360deg;
+  }
+  .rings > .rings:after {
+    --start: 270deg;
+  }
+  
+  @-webkit-keyframes ring {
+    from {
+      --value: var(--start);
+      --scale: 1;
+    }
+    50% {
+      --scale: 1.2;
+      --width-ratio: 1.5;
+    }
+    70% {
+      --scale: 1;
+      --value: calc(var(--start) + 180deg);
+      --width-ratio: 1;
+    }
+    80% {
+      --scale: 1.2;
+      --width-ratio: 1.5;
+    }
+    to {
+      --value: calc(var(--start) + 360deg);
+      --scale: 1;
+      --width-ratio: 1;
+    }
+  }
+  
+  @keyframes ring {
+    from {
+      --value: var(--start);
+      --scale: 1;
+    }
+    50% {
+      --scale: 1.2;
+      --width-ratio: 1.5;
+    }
+    70% {
+      --scale: 1;
+      --value: calc(var(--start) + 180deg);
+      --width-ratio: 1;
+    }
+    80% {
+      --scale: 1.2;
+      --width-ratio: 1.5;
+    }
+    to {
+      --value: calc(var(--start) + 360deg);
+      --scale: 1;
+      --width-ratio: 1;
+    }
+  }
+  @-webkit-keyframes ring-legacy {
+    from {
+      --value: var(--start);
+      --scale: 1;
+      transform: rotateY(var(--value)) rotateX(var(--value)) rotateZ(var(--value)) scale(var(--scale));
+    }
+    70% {
+      --scale: 1.2;
+      --value: calc(var(--start) + 180deg);
+      transform: rotateY(var(--value)) rotateX(var(--value)) rotateZ(var(--value)) scale(var(--scale));
+    }
+    to {
+      --value: calc(var(--start) + 360deg);
+      --scale: 1;
+      transform: rotateY(var(--value)) rotateX(var(--value)) rotateZ(var(--value)) scale(var(--scale));
+    }
+  }
+  @keyframes ring-legacy {
+    from {
+      --value: var(--start);
+      --scale: 1;
+      transform: rotateY(var(--value)) rotateX(var(--value)) rotateZ(var(--value)) scale(var(--scale));
+    }
+    70% {
+      --scale: 1.2;
+      --value: calc(var(--start) + 180deg);
+      transform: rotateY(var(--value)) rotateX(var(--value)) rotateZ(var(--value)) scale(var(--scale));
+    }
+    to {
+      --value: calc(var(--start) + 360deg);
+      --scale: 1;
+      transform: rotateY(var(--value)) rotateX(var(--value)) rotateZ(var(--value)) scale(var(--scale));
+    }
+  }
+  .logo {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    inset: 0;
+    filter: drop-shadow(0 0 1.5rem rgba(138, 205, 240, 0.8));
+    display: grid;
+    place-items: center;
+    background: var(--logo) center center no-repeat;
+    background-size: calc(var(--size) / 1.5);
+    opacity: 0.5;
+  }
+  
+  .demo {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+    --floor-tile-size: 2rem;
+    --floor-color: rgb(213 134 238 / 10%);
+    background: radial-gradient(transparent 100%), repeating-linear-gradient(45deg, var(--floor-color) 0, var(--floor-color) 1.9rem, transparent 1.9rem, transparent var(--floor-tile-size, 1rem)), repeating-linear-gradient(115deg, var(--floor-color) 0, var(--floor-color) 1.9rem, transparent 1.9rem, transparent var(--floor-tile-size, 1rem)), conic-gradient(from 0deg, #555, black, #111, #555);
+  }
+  
+  .filter {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: visible !important;
+    position: absolute;
+  }
+  
+  .bodyloader {
+    color: #a3f0f7;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .bodyloader:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    -webkit-backdrop-filter: blur(1rem);
+            backdrop-filter: blur(1rem);
+    -webkit-mask-image: radial-gradient(72vmin 72vmin at center, transparent 50%, black 70%);
+            mask-image: radial-gradient(72vmin 72vmin at center, transparent 50%, black 70%);
+    z-index: 111;
+  }
+  .bodyloader:after {
+    content: "";
+    position: absolute;
+    background: url(https://assets.codepen.io/907471/noise.svg);
+    mix-blend-mode: lighten;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    filter: invert(1);
+    z-index: var(--labs-sys-z-noise);
+  }
+  
+  a.labs-follow-me-twitter {
+    position: absolute;
+    left: auto;
+    right: auto;
+    display: grid;
+    place-items: center;
+    top: unset;
+    bottom: 2rem;
+    -webkit-backdrop-filter: blur(1rem);
+            backdrop-filter: blur(1rem);
+    border-radius: 0.1rem;
+  }

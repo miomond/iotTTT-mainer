@@ -1,0 +1,32 @@
+/* --------------start header---------- */
+header{
+    
+    /* position: relative;
+    height: 500px; */
+    margin-top: 120px;
+
+
+
+}
+.header-img {
+    /* position: absolute;
+    width: 788.5px;
+    height: 500px;
+    right: 0;
+    bottom: 0; */
+}
+
+header .content1{
+     font-size: xx-large;
+    width: 600px; 
+
+}
+header  .content1{
+    /* padding-right: 90px; */
+}
+.content1 p {
+    padding: 24px 0;
+    color: #686058;
+    line-height: 43px;
+    font-size: 31px;
+}

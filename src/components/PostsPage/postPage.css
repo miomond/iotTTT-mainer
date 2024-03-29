@@ -1,0 +1,95 @@
+
+/* third section */
+.third-section{
+   
+   
+}
+.postimages{
+    width: 950px!important ;
+    max-height: 650px!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imak{
+    border-radius: 15px;
+    max-width: 100%!important;
+    max-height: 100%!important;
+
+}
+
+
+.third-card{
+    
+    gap: 35px;
+    margin-top: 15px;
+    
+    
+}
+.third-card img{
+    width: 500px;
+    border-radius: 15px;
+    margin: 25px 0px;
+}
+
+.third-card-paragraph{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: fit-content;
+    padding: 35px 15px;
+    margin-bottom: 35px;
+    /* margin-top: 44px; */
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    border-radius: 35px;
+}
+
+
+.third-card-paragraph:hover{
+    box-shadow: 0px 0px 30px 1px rgba(37, 149, 248, 0.3);
+  transition: all .2s;
+}
+
+
+
+
+
+.third-card-paragraph h2{
+    width: 40%;
+    line-height: 35px;
+    color: #002c5f;
+    margin-left: 15px;
+}
+
+.third-card-paragraph p{
+    width: 80%;
+    line-height: 25px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+  .third-card img
+ {
+      width: 600px;
+
+ }
+ 
+
+}
+
+
+@media only screen and (max-width: 500px) {
+  .third-card img
+ {
+      width: 470px;
+
+ }
+ 
+
+}
