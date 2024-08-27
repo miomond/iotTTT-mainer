@@ -9,12 +9,7 @@ function SHPost({ item, i } ) {
     const post = item;
     const posted = item._id;
     const navigate = useNavigate();
-function go(){
-  navigate(`/users/allBlog/${posted}`, { state: post })
-}
-
-    console.log(post.likes);
-    console.log(post._id);
+function go(){navigate(`/users/allBlog/${posted}`, { state: post })}
   return (
     <>
     <div className="contant1">

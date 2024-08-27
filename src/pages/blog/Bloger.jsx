@@ -1,61 +1,20 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
 import "./styleBlog.css";
-import secondImg1 from "../../assets/inner1.jpeg";
-import secondImg2 from "../../assets/dash.png";
-import secondImg3 from "../../assets/tv.jpg";
 import heroBlog from "../../assets/generative-ai-smart-home-interface-with-controlling-dwevice.jpg";
-
-import axios from "axios";
-import { useState } from "react";
-import { useEffect } from "react";
 import PostPage from "../../components/PostsPage/PostPage";
 import HeroPost from "../../components/heroPost/HeroPost";
-import SearchInput from "../../components/searchInput/SearchInput";
 
-import { useSpring, animated } from "@react-spring/web";
+import { useSpring } from "@react-spring/web";
 import LandinngFooterSection from "../../components/footer/LandinngFooterSection";
 import Navpar from "../../components/NAv/Navpar";
-
-// const itemData = [
-//   {
-//     img: `${secondImg1}`,
-//     title: "Control your living room ",
-//     paragraph:
-//       "Imagine your all device controller become on your smart phone with one click away its time to say goodbye for tv remote controller who keep hiding from you every single time you need it ",
-//   },
-//   {
-//     img: `${secondImg2}`,
-//     title: "Control your office ",
-//     paragraph:
-//       "with our automated temperature sensors controlling the Air conditioner its time to say its never too cold nor too hot  to be able to focus more on your job avoiding any boring useless waste of time movement  ",
-//   },
-//   {
-//     img: `${secondImg3}`,
-//     title: "Control Your Kitchen",
-//     paragraph:
-//       "with us your kitchen can be more enjoyable because finally you can make sure that nothing will be burnt or got out the oven early because you always can know when its done and can stop the heat once its done even if you were outside the kitchen",
-//   },
-// ];
-
-
-
-
-
-
+import { useBlog } from "../../context/Blogser";
 
 
 function Bloger() {
+const blogsUser = useBlog()
+const blogs = blogsUser.AllPosts
   const [itemData, setItemData] = useState([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {const response = await axios.get("http://localhost:8000/blog/allblog");
-        setItemData(response.data.data);
-      } catch (error) {console.error("Error fetching data:", error); // Handle errors gracefully
-      }};
-      fetchData();
-    }, []); // Empty dependency array to fetch only once
-  
+
   
   const props = useSpring({
     from: { size: "20%" },
@@ -76,7 +35,6 @@ function Bloger() {
           the IOT felid{" "}
         </p>{" "}
       </section>{" "}
-      <SearchInput />{" "}
       <div className=" parent-post d-flex flex-lg-row-reverse flex-wrap   h-auto justify-content-around     ">
         <div className="post w-50 ">
           {" "}
@@ -104,16 +62,11 @@ function Bloger() {
         className="parent-second  d-flex justify-content-around w-100 flex-wrap "
         style={{ width: "fit-content", height: "fit-content" }}
       >
-        {itemData.map((item, i) => {
-          return (
-            <div>
-              {" "}
-              <HeroPost item={item} i={i} />{" "}
-            </div>
-          );
+        {blogs.map((item, i) => {
+          return (<div>{" "}<HeroPost item={item} i={i} />{" "}</div>);
         })}
       </div>
-            {itemData.map((item, i) => {
+            {blogs.map((item, i) => {
         return( <PostPage item={item} i={i} />)
       })}
       <LandinngFooterSection />
@@ -122,3 +75,35 @@ function Bloger() {
 }
 
 export default Bloger;
+
+
+
+
+
+
+
+
+// const itemData = [
+//   {
+//     img: `${secondImg1}`,
+//     title: "Control your living room ",
+//     paragraph:
+//       "Imagine your all device controller become on your smart phone with one click away its time to say goodbye for tv remote controller who keep hiding from you every single time you need it ",
+//   },
+//   {
+//     img: `${secondImg2}`,
+//     title: "Control your office ",
+//     paragraph:
+//       "with our automated temperature sensors controlling the Air conditioner its time to say its never too cold nor too hot  to be able to focus more on your job avoiding any boring useless waste of time movement  ",
+//   },
+//   {
+//     img: `${secondImg3}`,
+//     title: "Control Your Kitchen",
+//     paragraph:
+//       "with us your kitchen can be more enjoyable because finally you can make sure that nothing will be burnt or got out the oven early because you always can know when its done and can stop the heat once its done even if you were outside the kitchen",
+//   },
+// ];
+
+
+
+

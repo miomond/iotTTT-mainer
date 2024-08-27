@@ -10,47 +10,30 @@ function AboutUs() {
   return (
     <>
     <Navpar/>
-    <div
-        className="main-banner wow fadeIn  "
-        id="top"
-        data-wow-duration="1s"
-        data-wow-delay="0.5s"
-      >
+    <div className="main-banner wow fadeIn  " id="top" data-wow-duration="1s" data-wow-delay="0.5s">
         <div className="container ">
           <div className="row">
             <div className="col-lg-12">
               <div className="row">
                 <div className="col-lg-6 align-self-center">
-                  <div
-                    className="left-content show-up header-text wow fadeInLeft"
-                    data-wow-duration="1s"
-                    data-wow-delay="1s"
-                  >
+                  <div className="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                     <div className="row mb-5 ">
                       <div className="col-lg-12">
                         <h2>Get Our Latest Best Services Now</h2>
                       </div>
                       <div className="col-lg-12">
                         <div className="white-button first-button scroll-to-section">
-                          <a href="#contact">
-                            Free Quote <i className="fab fa-apple" />
-                          </a>
+                          <a href="#contact">Free Quote <i className="fab fa-apple" /></a>
                         </div>
                         <div className="white-button scroll-to-section">
-                          <a href="#contact">
-                            Free Quote <i className="fab fa-google-play" />
-                          </a>
+                          <a href="#contact">Free Quote <i className="fab fa-google-play" /></a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="col-lg-6">
-                  <div
-                    className="right-image wow fadeInRight"
-                    data-wow-duration="1s"
-                    data-wow-delay="0.5s"
-                  >
+                  <div className="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
                     <img src={slider} alt="" />
                   </div>
                 </div>
@@ -59,17 +42,6 @@ function AboutUs() {
           </div>
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
 
 <div id="services" className="services section">
   <div className="container">
@@ -145,14 +117,6 @@ function AboutUs() {
 </div>
 
 
-
-
-
-
-
-
-
-
 <div id="about" className="about-us section">
   <div className="container">
     <div className="row">
@@ -222,19 +186,6 @@ function AboutUs() {
 
 
 <LandinngFooterSection/>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     </>
   );

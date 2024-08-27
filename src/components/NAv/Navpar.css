@@ -20,7 +20,6 @@
 .login {
   cursor: pointer;
   position: relative;
-  padding: 8px 35px;
   font-size: 18px;
   color: #429ce3;
   border: 2px solid #429ce3;
@@ -30,8 +29,9 @@
   transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
   overflow: hidden;
   margin: 5px 10px;
-  width: 100px;
-  height: 25px;
+  padding:7px;
+  width: 170px;
+  /* height: 25px; */
   text-align: center;
 
 }
@@ -71,8 +71,7 @@
   background: #429ce3;
   padding: 0px 6px;
   border-radius: 10px;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.0.8),
-    -6px -6px 10px -1px rgba(199, 217, 252, 0.244) !important;
+
   cursor: pointer;
   transition: transform 0.9s;
   width: 165px;
@@ -135,9 +134,9 @@
   overflow: hidden;
   position: relative;
   height: 30px;
-  padding-right: 56px;
   cursor: pointer;
-  width: 130px;
+  padding: 21.5px;
+  width: 170px;
   margin-top: 5px;
 }
 

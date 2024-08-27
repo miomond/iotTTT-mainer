@@ -196,42 +196,67 @@ backdrop-filter: blur(2.8px);
     
   }
   .partalarm{
-    height: 400px;
+    height: 450px;
+
     width: 300px;
 
   }
 
 
 
-  .partalarm>div{
+  .alarmy{
 
-    height: 400px;
-    width: 150px;
-    padding: 20px 20px;
-		background: rgba(181, 196, 251, 0.689);
-		border-radius: 16px;
-		border: solid 0px 5px 5px 5px  rgba(181, 196, 251, 1) ;
-    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(2.8px);
+    height: 480px;
+    width: 300px;
+
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   justify-content: space-around;
-  transition: all 0.6s;
 
   
   }
+  .single{
+    background: rgba(181, 196, 251, 0.689);
+		border-radius: 16px;
+		border: solid 0px 5px 5px 5px  rgba(181, 196, 251, 1) ;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2.8px);
+    width: 100px;
+    height: 120px;
+    margin: 20px 0px;
+    overflow: hidden;
+    transition: all 0.6s;
+  }
+  .single:hover{
+      width: 300px;
+  }
 
-  .partalarm>div:hover{
-    height: 400px;
-    width: 300px;
-
+  .wod{
+    width: 300px!important;
+  }
+  .alarmy:hover{
+  }
+  .alarmy>div{
+    margin: 0px 0px;
+    height: 120px;
+    padding: 20px 0px;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .alarmy>p{
+    font-size: smaller;
+    width: 200px;
   }
   .alarm{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 
+  .alarming{
+    width: 150px;
+    height: 100px;
+    margin-top: 20px;
+  }
 
   .lights{
     display: grid;
@@ -250,7 +275,38 @@ backdrop-filter: blur(2.8px);
     border-radius: 67px 51px 105px 105px;
     box-shadow: white 0px 0px 5px 10px;
   }
+  .danger {
+    /* Existing styles for your button */
+    position: relative; /* Required for the animation to work */
+  }
+  
+  .danger::before,
+  .danger::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #053eeb;
+    display: block;
+    position: absolute; /* Positioned within the button */
+    top: 99%; /* Aligned to the center vertically */
+    transform: translateY(-50%); /* Offset to align with button border */
+    transition: none; /* Remove any existing transitions */
+    animation: grow 0.5s ease-in-out infinite alternate; /* Define animation */
+  }
+  
+  @keyframes grow {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0%;
+    }
 
+  }
+  
   
 .hr{
     margin: 15px 0;

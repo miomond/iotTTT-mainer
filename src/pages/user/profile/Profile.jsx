@@ -3,8 +3,6 @@ import "./profile.css";
 import { useAuth } from "../../../context/auth";
 function Profile() {
   const auth = useAuth();
-  console.log(auth.user);
-
   const userData = auth.user;
 
   return (

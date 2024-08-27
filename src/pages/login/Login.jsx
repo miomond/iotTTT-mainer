@@ -1,7 +1,7 @@
 import "./styleLogin.css";
 import { FormControl } from "react-bootstrap";
-import { Form, useForm } from "react-hook-form";
-import { useContext, useState } from "react";
+import {  useForm } from "react-hook-form";
+import {  useState } from "react";
 import axios from "axios";
 import { useAuth } from "../../context/auth";
 import { useNavigate } from "react-router-dom";
@@ -9,30 +9,17 @@ import Navpar from "../../components/NAv/Navpar";
 
 function Login() {
  const [masssa , setmasssa] = useState();
-
-
   const { register, handleSubmit, getValues, formState: { errors }, setError } = useForm();
-  const [user , setUser]= useState('')
   const auth = useAuth()
   const navigate = useNavigate('')
   
+  
   async function onSubmit(values) {
     try {const response = await axios.post("http://localhost:8000/users/login", values, {headers: { "Content-Type": "application/json" },});
-      if (!response.data.success) {
-           throw new Error(response.data.message || "Login failed");
-      }
-    setmasssa(response.data.message) 
-      const user = response.data.data.user
-      const token = response.data.data.token;
-      localStorage.setItem("token", token);
-      auth.login(user);
+      localStorage.setItem("token", response.data.data.token);
+      auth.login(response.data.data.user);
       navigate('/users/dashboard');
-  
-      
-    } catch (error) {
-      console.error("Error sending data:", error);
-      setError(error.message);
-    }
+    } catch (error) {setmasssa(error +  "Login failed");}
   }
   return (
     <>

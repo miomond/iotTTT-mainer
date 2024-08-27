@@ -7,13 +7,22 @@ export const AuthProvider = ({ children }) => {
   
   const login = (user) => {
     setUser(user);
+    localStorage.setItem('_id', user._id)
+    localStorage.setItem('fullName', user.fullName)
+    localStorage.setItem('email', user.email)
+    localStorage.setItem('password', user.password)
+    localStorage.setItem('phoneNumber', user.phoneNumber)
+    localStorage.setItem('nationalId', user.nationalId)
+    localStorage.setItem('wishLike', user.wishLike)
+    localStorage.setItem('likedBlogs', user.likedBlogs)
+    localStorage.setItem('role', user.role)
+    localStorage.setItem('address', user.address)
+    localStorage.setItem('joineDate', user.joineDate)
      };
 
   const logout = () => {
     setUser(null);
-    // localStorage.removeItem("user"); // Clear local storage
-    localStorage.removeItem("token"); // Clear token if needed
-    
+    localStorage.clear();    
   };
 
 

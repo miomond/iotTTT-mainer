@@ -26,11 +26,6 @@
     
     
 }
-.third-card img{
-    width: 500px;
-    border-radius: 15px;
-    margin: 25px 0px;
-}
 
 .third-card-paragraph{
     display: flex;
@@ -50,8 +45,17 @@
   transition: all .2s;
 }
 
+.postimages{
+    width: 500px;
+    height: 500px;
 
+}
 
+.postimages>img{
+    width: 500px;
+    border-radius: 15px;
+    margin: 25px 0px;
+}
 
 
 .third-card-paragraph h2{

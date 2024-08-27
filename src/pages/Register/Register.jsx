@@ -1,14 +1,13 @@
-import { Form, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useState } from "react";
 import "./register.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { FormControl } from "react-bootstrap";
 import Navpar from "../../components/NAv/Navpar";
-// import imgRegister from "../../assets/register.png";
 
 function Register() {
-  const [mass , setMass] = useState()
+  const [mass, setMass] = useState();
   const navigate = useNavigate();
   const {
     register,
@@ -18,66 +17,35 @@ function Register() {
   } = useForm();
 
   async function onSubmit(values) {
-    try {
-      const response = await axios.post(
-        "http://localhost:8000/users/register",
-        values,
-        {
-          headers: { "Content-Type": "application/json" },
-        }
-      );
-  
-      if (!response.data.success) {
-        throw new Error(response.data.message || "Registration failed");
-      }
-  
-      console.log("Data sent to the API:", response.data);
-      navigate("/login");
-  
-      // Redirect to login on successful registration
-
-
-    } catch (error) {
-      console.error("Error sending data:", error);
-  
-      // Display error message to the user
-      
-    }
+    try {   const response = await axios.post( "http://localhost:8000/users/register", values,
+       { headers: { "Content-Type": "application/json" } }   );  
+         console.log("Data sent to the API:", response.data); 
+         navigate("/login");
+    } catch (error) { setMass(response.data.message || "Registration failed") }
   }
-  function remove(){setMass('');}
-function FullName (){
-  setMass('please write your full name ')
-}
-function emailer (){
-  setMass('please write your email ')
-}
-function password (){
-  setMass('please write your password   which should contain alphabet (upper case letters and lower case letters  )   numbers  special character like $&   ' )
-}
-function phone (){
-  setMass('please write your phone number which should contain 11 digits')
+  function remove() {setMass("")}
+  function FullName() {setMass("please write your full name ")}
+  function emailer() {setMass("please write your email ");}
+  function password() {
+    setMass("please write your password   which should contain alphabet (upper case letters and lower case letters  )   numbers  special character like $&   ");
+  }
+  function phone() {setMass("please write your phone number which should contain 11 digits");
+  }
 
-}
+  function National() {
+    setMass("please write your national id  it should contain 14 digits ");
+  }
 
-function National (){
-  setMass('please write your national id  it should contain 14 digits ')
-}
+  function address() {
+    setMass("please write your address ");
+  }
 
-function address  (){
-  setMass('please write your address ')
-}
-
-  
   return (
     <>
-            <Navpar />
+      <Navpar />
 
       <div className="bod">
-
-        <div className="massege"  >
-            {mass}
-
-        </div>
+        <div className="massege">{mass}</div>
         <div className="conteiner">
           <div className="text">Register</div>
 
@@ -87,7 +55,11 @@ function address  (){
             <div className="form-row">
               <div className="input-data">
                 {/* enput User Name */}
-                <label className="label"  htmlFor="user name" style={{ color: "white" }}>
+                <label
+                  className="label"
+                  htmlFor="user name"
+                  style={{ color: "white" }}
+                >
                   {" "}
                   user name
                 </label>
@@ -104,23 +76,20 @@ function address  (){
                   variant="standard"
                   styles={{
                     underline: {
-                      borderColor: "#ccc", // Set your desired border color
+                      borderColor: "#ccc", 
                     },
                     label: {
-                      color: "#f60000", // Set your desired label color
+                      color: "#f60000", 
                     },
                   }}
                   {...register("fullName", {
                     required: {
                       value: true,
-                      //   massage: "Your Name is Required",
                     },
                     maxLength: {
                       value: 30,
-                      //   massage: " Max length exceeded",
                     },
                     minLength: 3,
-                    // massage: "Minimum 3 characters",
                   })}
                 />
 
@@ -136,12 +105,16 @@ function address  (){
               </div>
 
               <div className="input-data">
-                <label className="label" htmlFor="Email" style={{ color: "white" }}>
+                <label
+                  className="label"
+                  htmlFor="Email"
+                  style={{ color: "white" }}
+                >
                   Email
                 </label>
                 <FormControl
-                onFocus={emailer}
-                onBlur={remove}
+                  onFocus={emailer}
+                  onBlur={remove}
                   id="standard-Email-input"
                   type="email"
                   helperText="This Input is Required"
@@ -150,7 +123,6 @@ function address  (){
                   {...register("email", {
                     required: {
                       value: true,
-                      //   massage: "Your Email is Required",
                     },
                     pattern: {
                       value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
@@ -168,12 +140,16 @@ function address  (){
                 )}
               </div>
               <div className="input-data">
-                <label className="label" htmlFor="password" style={{ color: "white" }}>
+                <label
+                  className="label"
+                  htmlFor="password"
+                  style={{ color: "white" }}
+                >
                   Password
                 </label>
                 <FormControl
-                onFocus={password}
-                onBlur={remove}
+                  onFocus={password}
+                  onBlur={remove}
                   id="standard-password-input"
                   type="password"
                   helperText="This Input is Required"
@@ -182,15 +158,12 @@ function address  (){
                   {...register("password", {
                     required: {
                       value: true,
-                      //   massage: "Your password is Required",
                     },
                     minLength: {
                       value: 8,
-                      //   massage: "Minimum 8 characters",
                     },
                     maxLength: {
                       value: 30,
-                      //   massage: " Max length exceeded",
                     },
                     pattern: {
                       value:
@@ -217,13 +190,17 @@ function address  (){
             </div>
             <div className="form-row">
               <div className="input-data">
-                <label className="label" htmlFor="phoneN" style={{ color: "white" }}>
+                <label
+                  className="label"
+                  htmlFor="phoneN"
+                  style={{ color: "white" }}
+                >
                   Phone Number
                 </label>
 
                 <FormControl
-                onFocus={phone}
-                onBlur={remove}
+                  onFocus={phone}
+                  onBlur={remove}
                   id="standard-Number-input"
                   type="tel"
                   helperText="This Input is Required"
@@ -232,39 +209,43 @@ function address  (){
                   {...register("phoneNumber", {
                     required: {
                       value: true,
-                      //   massage: "Your Number is Required",
                     },
                     maxLength: {
                       value: 11,
-                      //   massage: "Max length exceeded",
                     },
                     pattern: {
                       value: /^[0-9]+$/,
-                      //   massage: "Entered value does not match Number format",
                     },
                   })}
                 />
 
-                {errors.phoneNumber && errors.phoneNumber.type === "required" && (
-                  <span style={{ color: "white" }}>This is required</span>
-                )}
-                {errors.phoneNumber && errors.phoneNumber.type === "maxLength" && (
-                  <span style={{ color: "white" }}>Max length exceeded</span>
-                )}
-                {errors.phoneNumber && errors.phoneNumber.type === "pattern" && (
-                  <span style={{ color: "white" }}>
-                    Entered value does not match Phone Number format
-                  </span>
-                )}
+                {errors.phoneNumber &&
+                  errors.phoneNumber.type === "required" && (
+                    <span style={{ color: "white" }}>This is required</span>
+                  )}
+                {errors.phoneNumber &&
+                  errors.phoneNumber.type === "maxLength" && (
+                    <span style={{ color: "white" }}>Max length exceeded</span>
+                  )}
+                {errors.phoneNumber &&
+                  errors.phoneNumber.type === "pattern" && (
+                    <span style={{ color: "white" }}>
+                      Entered value does not match Phone Number format
+                    </span>
+                  )}
               </div>
               <div className="input-data">
-                <label className="label" htmlFor="user name" style={{ color: "white" }}>
+                <label
+                  className="label"
+                  htmlFor="user name"
+                  style={{ color: "white" }}
+                >
                   National Id
                 </label>
 
                 <FormControl
-                onFocus={National}
-                onBlur={remove}
+                  onFocus={National}
+                  onBlur={remove}
                   id="standard-NationalId-input"
                   type="tel"
                   helperText="This Input is Required"
@@ -273,15 +254,12 @@ function address  (){
                   {...register("nationalId", {
                     required: {
                       value: true,
-                      // massage: "Your nationalId Id is Required",
                     },
                     maxLength: {
                       value: 14,
-                      //  massage:"Max length exceeded"
                     },
                     minLength: {
                       value: 14,
-                      //  massage:"Min length 14 Character"
                     },
                   })}
                 />
@@ -295,19 +273,21 @@ function address  (){
                   )}
                 {errors.nationalId &&
                   errors.nationalId.type === "minLength" && (
-                    <span style={{ color: "white" }}>
-                      Min length 14 number
-                    </span>
+                    <span style={{ color: "white" }}>Min length 14 number</span>
                   )}
               </div>
               <div className="input-data">
-                <label className="label" htmlFor="address" style={{ color: "white" }}>
+                <label
+                  className="label"
+                  htmlFor="address"
+                  style={{ color: "white" }}
+                >
                   Address
                 </label>
 
                 <FormControl
-                onFocus={address}
-                onBlur={remove}
+                  onFocus={address}
+                  onBlur={remove}
                   id="standard-Address-input"
                   type="text"
                   helperText="This Input is Required"
@@ -316,15 +296,12 @@ function address  (){
                   {...register("address", {
                     required: {
                       value: true,
-                      // massage: "Your Address is Required",
                     },
                     maxLength: {
                       value: 30,
-                      // massage:"Max length exceeded"
                     },
                     minLength: {
                       value: 4,
-                      // massage:"Min length 4 Character"
                     },
                   })}
                 />
@@ -339,10 +316,8 @@ function address  (){
                   <span style={{ color: "white" }}>Min length 4 Character</span>
                 )}
               </div>
-              
             </div>
             <div className="form-row">
-            
               <div className="submit-btn">
                 <div className="input-data">
                   <div className="inner" />
