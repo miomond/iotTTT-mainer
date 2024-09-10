@@ -9,12 +9,7 @@ import Navpar from "../../components/NAv/Navpar";
 function Register() {
   const [mass, setMass] = useState();
   const navigate = useNavigate();
-  const {
-    register,
-    handleSubmit,
-    getValues,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit, getValues, formState: { errors },} = useForm();
 
   async function onSubmit(values) {
     try {   const response = await axios.post( "http://localhost:8000/users/register", values,

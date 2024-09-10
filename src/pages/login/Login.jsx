@@ -15,11 +15,32 @@ function Login() {
   
   
   async function onSubmit(values) {
-    try {const response = await axios.post("http://localhost:8000/users/login", values, {headers: { "Content-Type": "application/json" },});
-      localStorage.setItem("token", response.data.data.token);
-      auth.login(response.data.data.user);
-      navigate('/users/dashboard');
-    } catch (error) {setmasssa(error +  "Login failed");}
+
+    // try {const response = await axios.post("http://localhost:8000/users/login", values, {headers: { "Content-Type": "application/json" },});
+    //   localStorage.setItem("token", response.data.data.token);
+    //   auth.login(response.data.data.user);
+    //   navigate('/users/dashboard');
+    // } catch (error) {setmasssa(error +  "Login failed");}
+
+
+    let fake = {  username: 'emilys',password: 'emilyspass',token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJtaWNoYWVsdyIsImVtYWlsIjoibWljaGFlbC53aWxsaWFtc0B4LmR1bW15anNvbi5jb20iLCJmaXJzdE5hbWUiOiJNaWNoYWVsIiwibGFzdE5hbWUiOiJXaWxsaWFtcyIsImdlbmRlciI6Im1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL21pY2hhZWx3LzEyOCIsImlhdCI6MTcxNzYxMTc0MCwiZXhwIjoxNzE3NjE1MzQwfQ.eQnhQSnS4o0sXZWARh2HsWrEr6XfDT4ngh0ejiykfH8",}
+
+    fetch('https://dummyjson.com/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        
+        username: 'emilys',
+        password: 'emilyspass',
+      })
+    })
+    .then(res => res.json())
+    .then(console.log).finally(()=>{
+      localStorage.setItem("token", fake.token);
+        auth.login(fake);
+      
+      navigate('/users/dashboard')});
+    
   }
   return (
     <>
