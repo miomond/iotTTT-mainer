@@ -59,12 +59,10 @@ function Login() {
           {/* input password */}
           <div className="form-control " style={{backgroundColor:'transparent', border :'none'  ,padding:'0'}}><label htmlFor="Password"> Password</label>
           <FormControl aria-describedby="passwordHelpBlock" id="standard-password-input" label="Password" type="password" autoComplete="current-password" variant="standard" color="warning"
-          {...register("password", { required: {  value: true,},minLength: {  value: 8},  maxLength:{  value: 30},pattern: { value:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/, },})}/>
+          {...register("password", { required: {  value: true,},
+          })}/>
             {errors.password && errors.password.type === "required" && (<span style={{ color: "red" , marginTop:"10px" }}>This is required</span> )}
-           {errors.password && errors.password.type === "maxLength" && (   <span style={{ color: "red" , marginTop:"10px" }}>Max length exceeded</span> )}
-            {errors.password && errors.password.type === "minLength" && (   <span style={{ color: "red" , marginTop:"10px" }}>Min length 8 Character</span> )}
-             {errors.password && errors.password.type === "pattern" && (   <span style={{ color: "red" , marginTop:"10px" }}>     Entered value does not match password    </span>)}
-             {errors.password && errors.password.type === "pattern" && (   <span style={{ color: "red" , marginTop:"10px" }}>     Entered value does not match password    </span>)}
+
 
           </div>
           {/* button */}
