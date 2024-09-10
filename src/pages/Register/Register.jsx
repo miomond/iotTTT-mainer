@@ -161,12 +161,7 @@ function Register() {
                     },
                     maxLength: {
                       value: 30,
-                    },
-                    pattern: {
-                      value:
-                        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
-                      message: "Entered value does not match password format",
-                    },
+                    }
                   })}
                 />
                 {errors.password && errors.password.type === "required" && (
