@@ -12,11 +12,13 @@ function Register() {
   const { register, handleSubmit, getValues, formState: { errors },} = useForm();
 
   async function onSubmit(values) {
-    try {   const response = await axios.post( "http://localhost:8000/users/register", values,
-       { headers: { "Content-Type": "application/json" } }   );  
-         console.log("Data sent to the API:", response.data); 
-         navigate("/login");
-    } catch (error) { setMass(response.data.message || "Registration failed") }
+    navigate("/login");
+
+    // try {   const response = await axios.post( "http://localhost:8000/users/register", values,
+    //    { headers: { "Content-Type": "application/json" } }   );  
+    //      console.log("Data sent to the API:", response.data); 
+    //     //  navigate("/login");
+    // } catch (error) { setMass(response.data.message || "Registration failed") }
   }
   function remove() {setMass("")}
   function FullName() {setMass("please write your full name ")}
