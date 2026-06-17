@@ -72,9 +72,9 @@ npm run dev
 ```
  ## 4. View the App: Open your browser and navigate to the URL provided in your terminal (usually http://localhost:5173).
 ### 🧩 Built With
-**React 18** - Core frontend framework
-**Vite**- Next Generation Frontend Tooling
-**Bootstrap 5** - CSS Framework for responsive layouts
-**Socket.IO Client** - Real-time event-based communication
-**Chart.js & React-Chartjs-2** - Data visualization
+- **React 18** - Core frontend framework
+- **Vite**- Next Generation Frontend Tooling
+- **Bootstrap 5** - CSS Framework for responsive layouts
+- **Socket.IO Client** - Real-time event-based communication
+- **Chart.js & React-Chartjs-2** - Data visualization
 Happy Automating! 🚀🤖
