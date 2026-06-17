@@ -60,7 +60,8 @@ cd iotTTT-mainer-main
 ```
  ##  2. Install Dependencies: We need to download all the required packages (React, Vite, Bootstrap, Socket.IO, Chart.js, etc.). Run:
 bash
-``` npm install       ```
+```
+npm install       ```
 (Bootstrap is already integrated globally in App.jsx, so npm install handles the setup automatically).
 
  ## 3. Start the Development Server: Fire up the lightning-fast Vite build tool:
