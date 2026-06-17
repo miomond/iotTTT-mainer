@@ -35,7 +35,7 @@ socket.emit('subscribe', { 'topic': "pir" })       // Intruder Detection
 socket.emit('subscribe', { 'topic': "flame" })     // Fire/Smoke Detection
 socket.emit('subscribe', { 'topic': "soilmois" })  // Plant Moisture
 
-
+```
 
 Once subscribed, the app listens continuously. When a physical sensor publishes new data to the MQTT broker, the backend forwards it to the React app via the WebSocket mqtt event:
 
