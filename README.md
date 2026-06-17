@@ -41,17 +41,19 @@ Once subscribed, the app listens continuously. When a physical sensor publishes 
 
 javascript
 
-
+```
 socket.on('mqtt', function(data) {
   // Parses the incoming payload and updates the UI state in real-time!
 });
+```
 3. 📤 Sending Orders to Devices (Publishing)
 When you toggle a switch on the UI (like turning on a light), the app emits a publish event via Socket.IO:
 
 javascript
 
-
+```
 socket.emit('publish', { 'topic': "LED1", 'payload': "LED1 ON" });
+```
 The backend takes this message and publishes it directly to the MQTT broker. The physical smart device listening to the LED1 topic receives the payload and physically turns the light on! 💡
 
 (Note: Ensure your Socket.IO connection strings and event listeners in Dashboard.jsx are uncommented for live production).
@@ -67,29 +69,34 @@ Step-by-Step Instructions
 
 bash
 
-
+```
 git clone <your-repo-url>
+```
+```
 cd iotTTT-mainer-main
+```
 2. Install Dependencies: We need to download all the required packages (React, Vite, Bootstrap, Socket.IO, Chart.js, etc.). Run:
 
 bash
 
-
+```
 npm install
+```
 (Bootstrap is already integrated globally in App.jsx, so npm install handles the setup automatically).
 
 3. Start the Development Server: Fire up the lightning-fast Vite build tool:
 
 bash
 
-
+```
 npm run dev
+```
 4. View the App: Open your browser and navigate to the URL provided in your terminal (usually http://localhost:5173).
 
 🧩 Built With
-React 18 - Core frontend framework
-Vite - Next Generation Frontend Tooling
-Bootstrap 5 - CSS Framework for responsive layouts
-Socket.IO Client - Real-time event-based communication
-Chart.js & React-Chartjs-2 - Data visualization
+** React 18 ** - Core frontend framework
+** Vite **- Next Generation Frontend Tooling
+** Bootstrap 5 ** - CSS Framework for responsive layouts
+** Socket.IO Client ** - Real-time event-based communication
+** Chart.js & React-Chartjs-2 ** - Data visualization
 Happy Automating! 🚀🤖
